@@ -15,5 +15,51 @@ spec:
       containers:
       - name: wallet-api-devel
         image: nginx:latest #nanajanashia/argocd-app:1.2
+        env:
+        - name: SOURCE_BUCKET_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: source_bucket_name
+        - name: SERVICE_ACCOUNT_EMAIL
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: service_account_email
+        - name: ENTRY_POINT
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: entry_point
+        - name: MIN_INSTANCES
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: min_instances
+        - name: MAX_INSTANCES
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: max_instances
+        - name: FUNCTION_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: function_name
+        - name: FUNCTION_PREFIX
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: function_prefix
+        - name: VPC_CONNECTOR
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: vpc_connector
+        - name: REGION
+          valueFrom:
+            configMapKeyRef:
+              name: example-config
+              key: region
         ports:
         - containerPort: 8080
