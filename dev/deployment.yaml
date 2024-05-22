@@ -19,47 +19,22 @@ spec:
         - name: SOURCE_BUCKET_NAME
           valueFrom:
             configMapKeyRef:
-              name: example-config
+              name: source_bucket_name
               key: source_bucket_name
         - name: SERVICE_ACCOUNT_EMAIL
           valueFrom:
             configMapKeyRef:
-              name: example-config
+              name: service_account_email
               key: service_account_email
         - name: ENTRY_POINT
           valueFrom:
             configMapKeyRef:
-              name: example-config
+              name: entry_point
               key: entry_point
         - name: MIN_INSTANCES
           valueFrom:
             configMapKeyRef:
-              name: example-config
+              name: min_instances
               key: min_instances
-        - name: MAX_INSTANCES
-          valueFrom:
-            configMapKeyRef:
-              name: example-config
-              key: max_instances
-        - name: FUNCTION_NAME
-          valueFrom:
-            configMapKeyRef:
-              name: example-config
-              key: function_name
-        - name: FUNCTION_PREFIX
-          valueFrom:
-            configMapKeyRef:
-              name: example-config
-              key: function_prefix
-        - name: VPC_CONNECTOR
-          valueFrom:
-            configMapKeyRef:
-              name: example-config
-              key: vpc_connector
-        - name: REGION
-          valueFrom:
-            configMapKeyRef:
-              name: example-config
-              key: region
         ports:
         - containerPort: 8080
