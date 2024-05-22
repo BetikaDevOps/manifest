@@ -16,3 +16,4 @@ data:
   project_id: "betika-dev-wallet"
   function_description: "function_description"
   vpc_connector_egress_settings: "ALL_TRAFFIC"
+  new_gh_value: "done"

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wallet-api-devel
+  name:  $WALLET_SERVICE
   namespace: default
   labels:
     app: wallet-api-dev
@@ -24,6 +24,6 @@ spec:
     spec:
       containers:
       - name: wallet-api-devel
-        image: nginx:latest #1.21.1
+        image: nginx:1.21.1
         ports:
         - containerPort: 8080
