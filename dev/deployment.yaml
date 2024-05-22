@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  $WALLET_SERVICE
+  name: wallet-api-devel
   namespace: default
   labels:
     app: wallet-api-dev
