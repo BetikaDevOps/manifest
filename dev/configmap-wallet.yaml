@@ -2,12 +2,12 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: wallet-platform-dev
-  namespace: ussd-app-1-dev
+  namespace: default
 data:
   source_bucket_name: "betika-deployments-source"
   service_account_email: "sa-integration-betika-wallet-d@betika-dev-wallet.iam.gserviceaccount.com"
   entry_point: "router"
-  min_instances: "5"
+  min_instances: "0"
   max_instances: "50"
   function_name: "fn-integration-boabank-et-callback"
   function_prefix: "dev"
@@ -16,3 +16,4 @@ data:
   project_id: "betika-dev-wallet"
   function_description: "function_description"
   vpc_connector_egress_settings: "ALL_TRAFFIC"
+
