@@ -25,5 +25,11 @@ spec:
       containers:
       - name: wallet-api-devel
         image: nginx:1.21.1
+        env:
+        - name: SOURCE_BUCKET_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: test-config
+              key: source_bucket_value
         ports:
         - containerPort: 8080
